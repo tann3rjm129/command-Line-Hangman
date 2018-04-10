@@ -1,13 +1,19 @@
 
 var Word = require("./Word");
 var Letter = require("./Letter");
+// importing other contructors
 
+// importing inquirer
 var inquirer = require("inquirer");
 
+// using same word bank as previous Hangman Game
 var words = ["squanchy", "unity", "birdperson", "picklerick", "shwifty", "councilofricks", "portalgun", "summer", "morty", "szechuansauce", "wubalubadubdub", "jerry"];
+// stores a randomword from the wordbank in a variable
 var randomWord = words[Math.floor(Math.random() * words.length)];
 
+// Letters stored in an array variable
 var lettersarray = [];
+// Amount of guesses left
 var guessesLeft = 12; 
 
 function startup() {
