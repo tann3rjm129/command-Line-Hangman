@@ -12,16 +12,34 @@ var guessesLeft = 12;
 
 function startup() {
 
-	console.log("welcome to Rick and Morty Hangman 2.0");
+	console.log("welcome to Rick and Morty Hangman 2.0 : Inquirer EDITION");
 
-	// for (var x=0, x < randomWord.length; x++) {
+	for (var x=0, x < randomWord.length; x++) {
 
-	// 	lettersarray.push(new Letter(randomWord.charAt(x)));
-	// }
+		lettersarray.push(new Letter(randomWord.charAt(x)));
+	}
 
-	// var activeWord = new Word(lettersarray);
+	var activeWord = new Word(lettersarray);
 
-	
+
+	if (guessesLeft > 0) {
+
+			var wordShow = activeWord.showLetters();
+
+			console.log("You got "+ guessesLeft + " guesses left BROH!");
+
+			inquirer.prompt([
+							{
+								message: "Guess a letter BROH!",
+								type: input,
+								name: "Guess question"
+							}
+				]).then(function(input)) {
+
+
+			}
+
+	}
 
 
 }
