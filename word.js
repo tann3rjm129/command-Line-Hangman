@@ -18,7 +18,7 @@
  			return console.log(stringLetter);
  
  	};
- 	// Runs through the charactersGuessed function from Letter
+ 	// Runs through the charactersGuessed function from Letter constructor
  	this.lettersGuess = function(guess) {
 
  			// runs through the lenth of the word

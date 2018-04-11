@@ -74,11 +74,12 @@ var activeWord = new Word(lettersArray);
 
 function game() {
 
+// was going to wrap points statement, but couldnt get game to function properly as is
 	if (guessesLeft > 0) {
 
-			// shows full word on screen?
+			// shows full word on screen? with no underscores
 			var wordToGuess = activeWord.showLetters();
-	
+			console.log("\n");
 			console.log("You got "+ guessesLeft + " guesses left BROH!");
 
 			console.log("\n------------------\n");
@@ -111,31 +112,33 @@ function game() {
 					if (alreadyGuessed = true) {
 
 						console.log("You guessed this letter already BROH!");
+						console.log("\n");
 
-					}
-
-					else if (activeWord.lettersGuess() = true) {
-
-						console.log("\n------------------\n");
-						console.log("You guessed the word BROH!");
-						score++;
-						console.log("You earned a point!");
-						console.log("Score: "+ score);
-						console.log("\n------------------\n");
-						return;
 					}
 
 					else {
 
 						guessesLeft--;
 						letterGuessesArray.push(commandLineGuess);
-						activeWord.CharacterGuessed(commandLineGuess);
+						activeWord.lettersGuess(commandLineGuess);
+
+
+						if (activeWord.lettersGuess(commandLineGuess) = true) {
+
+							console.log("\n------------------\n");
+							console.log("You guessed the word BROH!");
+							score++;
+							console.log("You earned a point!");
+							console.log("Score: "+ score);
+							console.log("\n------------------\n");
+							return;
+					}
+
 
 					}
 
 					game();
-
-					});
+				});
 
 
 			}
