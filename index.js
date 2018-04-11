@@ -1,3 +1,4 @@
+// linked to bootstrap portfolio https://tann3rjm129.github.io/Bootstrap-Portfolio/portfolio.html
 
 var Word = require("./word");
 var Letter = require("./letter");
